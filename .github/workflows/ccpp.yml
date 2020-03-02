@@ -1,0 +1,107 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main ()
+{
+	// welcome message
+	cout << "Can't count change? Here to help. Welcome to the Handy Dandy Change Counter program! \n\n" ;
+	
+	// declerations
+	int penny, nickel, dime, quarter, half, dollar;
+	
+	// request user input 1
+	do {
+		cout << "How many pennies do you have? \n";
+		cout << "Please enter a number greater or equal to zero. \n\n";
+		cin >>  penny;
+		cout << "\n" ;
+		if (penny < 0)
+			 cout << "You did not enter a valid number please try again. \n";
+	}
+	while (penny < 0); 
+	cout << "You have entered " << penny << " pennies. \n\n";
+		
+	// request user input 2
+	do {
+		cout << "How many nickels do you have? \n";
+		cout << "Please enter a number greater or equal to zero. \n\n";
+		cin >>  nickel;
+		cout << "\n" ;
+		if (nickel < 0)
+			cout << "You did not enter a valid number please try again. \n";
+	}
+	while (nickel < 0); 
+	
+	cout << "You have entered " << nickel << " nickels. \n\n";
+	
+	// request user input 3
+	do {
+		cout << "How many dimes do you have? \n";
+		cout << "Please enter a number greater or equal to zero. \n\n";
+		cin >>  dime;
+		cout << "\n" ;
+		if (dime < 0) 
+			cout << "You did not enter a valid number please try again. \n";	
+	}
+	while (dime < 0);
+		
+	cout << "You have entered " << dime << " dimes. \n\n";
+	
+	// request user input 4
+	do {
+		cout << "How many quarters do you have? \n";
+		cout << "Please enter a number greater or equal to zero. \n\n";
+		cin >>  quarter;
+		cout << "\n" ;
+		if (quarter < 0)
+			cout << "You did not enter a valid number please try again. \n";
+	}
+	while (quarter < 0);
+		
+	cout << "You have entered " << quarter << " quarters. \n\n";
+	
+	// request user input 5
+	do {
+		cout << "How many half-dollars do you have? \n";
+		cout << "Please enter a number greater or equal to zero. \n\n";
+		cin >>  half;
+		cout << "\n" ;
+		if (half < 0)
+			cout << "You did not enter a valid number please try again. \n";
+	}
+	while (half < 0);
+		cout << "You have entered " << half << " half-dollars. \n\n";
+	
+	// request user input 6
+	do {
+		cout << "How many dollar-coins do you have? \n";
+		cout << "Please enter a number greater or equal to zero. \n\n";
+		cin >>  dollar;
+		cout << "\n" ;
+		if (dollar < 0)
+			cout << "You did not enter a valid number please try again. \n";
+	}
+	while (dollar < 0);
+		cout << "You have entered " << dollar << " dollar-coins. \n\n";
+		
+	//outputting total coins
+	cout << "You have coins in the amound of: \n\n"
+	<< penny << " pennies. \n\n"
+	<< nickel << " nickels. \n\n"
+	<< dime << " dimes. \n\n"
+	<< quarter << " quarters. \n\n"
+	<< half << " half-dollars. \n\n"
+	<< dollar << " dollar-coins. \n\n";
+	
+	// declaring a sum
+	double total;
+	
+	// totaling the sum
+	total = penny * .01 + nickel * .05 + dime * .10 + quarter *.25 + half *.50 + dollar * 1.00;
+	
+	// output the sum
+	cout << "You have a total amount of change equal to $"  << total << ".";
+	
+	return 0;
+}
